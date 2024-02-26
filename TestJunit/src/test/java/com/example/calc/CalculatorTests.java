@@ -39,16 +39,17 @@ class CalculatorTests {
 	public static void dest() {
 		System.out.println("Runs after all test cases");
 	}
+	
 	@Test
 	@DisplayName("add")
 	@Tag("addition")
 	void addsTwoNumbers() {
 		Calculator calculator = new Calculator();
-		assertEquals(3, calculator.add(1, 1), "1 + 1 should equal 2");
+		assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
 	}
 	
 	@DisplayName("paramTest")
-	@ParameterizedTest(name = "{0} + {1} = {2}")
+	@ParameterizedTest(name = "paramTest")
 	@CsvSource({
 			"0,    1,   1",
 			"1,    2,   3",
@@ -85,7 +86,7 @@ class CalculatorTests {
 	}
 	
 	@Test
-	@Disabled
+	@Disabled("temporarily skipped")
 	@DisplayName("adding negative numbers")
 	void addNeg() {
 		Calculator calc = new Calculator();

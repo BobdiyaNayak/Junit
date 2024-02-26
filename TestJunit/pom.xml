@@ -51,6 +51,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
 				<configuration>
+					<excludes>
+						<exclude>**/TestSuiteExample*.java</exclude>
+					</excludes>
 					<properties>
 						<configurationParameters>
 						junit.platform.reporting.open.xml.enabled = true
