@@ -43,7 +43,7 @@
 				<version>3.2.5</version>
 				<configuration>
 					<!--<excludes>
-						<exclude>**/TestSuiteExample*.java</exclude>
+						<exclude>${runSuite}</exclude>
 					</excludes>-->
 					<!--<includes>
 						<include>${runSuite}</include>
